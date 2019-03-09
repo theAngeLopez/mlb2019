@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Youtube from "../components/youtube"
 import CaptionList from "../components/captionList"
 import Term from "../components/term"
+import Firebase from "../services/firebase"
 
 import 'semantic-ui-css/semantic.min.css'
 
