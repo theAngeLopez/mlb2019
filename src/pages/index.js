@@ -29,7 +29,7 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', 'background-color': 'rgba(244, 249, 361, 1)' }}>
         <div style={{ marginRight: '5px', width: '75%'}}>
           <Youtube />
           { this.state.currentSelectedCaption && <Term title={this.state.currentSelectedCaption} definition={this.state.definition}/> }
