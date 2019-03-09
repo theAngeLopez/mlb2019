@@ -1,5 +1,7 @@
 import React from "react"
 
+import "./extralinks.css"
+
 class ExtraLinks extends React.Component {
   constructor(props) {
     super(props);
@@ -16,15 +18,15 @@ class ExtraLinks extends React.Component {
     links.forEach((link) => {
       console.log(link)
       extraLinks.push(
-        <div>
+        <span className="link-url">
           <a href={ link }>{ link }</a>
-        </div>
+        </span>
       );
     })
 
     return (
       <div className="links">
-        {extraLinks}
+        <span className="title">Extra links: </span>{extraLinks}
       </div>
     );
   }

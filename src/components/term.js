@@ -1,6 +1,10 @@
 import React from "react"
 import ExtraLinks from "../components/extralinks"
 
+import { Card } from 'semantic-ui-react'
+
+import "./term.css"
+
 class Term extends React.Component {
   constructor(props) {
     super(props);
@@ -15,10 +19,16 @@ class Term extends React.Component {
     const links = ["link1.com", "link2.com", "link3.com"]
 
     return (
-      <div>
-        <h1 className="term-title">{ title }</h1>
-        <p className="term-definition">{ definition }</p>
-        <ExtraLinks links={ links }/>
+      <div className="term-component">
+        <Card fluid>
+          <Card.Content>
+            <Card.Header>{ title }</Card.Header>
+            <Card.Description>{ definition }</Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <ExtraLinks links={ links }/>
+          </Card.Content>
+        </Card>
       </div>
     );
   }
