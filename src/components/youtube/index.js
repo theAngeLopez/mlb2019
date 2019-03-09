@@ -8,13 +8,15 @@ const opts = {
   height: '500',
   width: '1000',
   playerVars: { // https://developers.google.com/youtube/player_parameters
-    autoplay: 1
+    autoplay: 1,
+    cc_load_policy: 1,
+    cc_lang_pref: 'en',
   }
 };
 
 const Youtube = () => {
   const _onReady = (event) => {
-    event.target.seekTo(0, false);
+    event.target.seekTo(0, true);
   };
 
   return (
