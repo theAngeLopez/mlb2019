@@ -61,6 +61,11 @@ class CaptionList extends React.Component {
     currentTime: 0,
   };
 
+  updateScroll = () => {
+    var element = document.getElementById("scroll-list");
+    element.scrollTop = element.scrollHeight;
+  };
+
   componentDidMount() {
     let currentTime = 0;
     window.setInterval(() => {
@@ -71,11 +76,15 @@ class CaptionList extends React.Component {
     }, 1000)
   }
 
+  componentDidUpdate() {
+    this.updateScroll();
+  }
+
   render() {
     return (
       <div className="caption-list" style={{ marginTop: '10px' }}>
         <Header size="large">TITLE TBD</Header>
-        <div style={{ height: '500px', overflow: 'scroll' }}>
+        <div id="scroll-list" style={{ height: '500px', overflow: 'scroll' }}>
           { this.state.captions.map((caption) => {
             return <Caption text={caption} onClick={ this.props.onClick } />
           }) }
