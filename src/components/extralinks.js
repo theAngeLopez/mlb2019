@@ -30,7 +30,7 @@ class ExtraLinks extends React.Component {
 
     return (
       <div className="links">
-        <span className="title">Extra links: </span>{extraLinks}
+        <span className="title">Extra resources: </span>{extraLinks}
       </div>
     );
   }

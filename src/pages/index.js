@@ -22,12 +22,12 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <div style={{ marginRight: '5px'}}>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ marginRight: '5px', width: '75%'}}>
           <Youtube />
           <Term title={this.state.currentSelectedCaption} definition={this.state.currentSelectedCaption}/>
         </div>
-        <div>
+        <div style={{ width: '33%', height: '772px'}}>
           <CaptionList onClick={ this.onChangeCaption } />
         </div>
       </div>
