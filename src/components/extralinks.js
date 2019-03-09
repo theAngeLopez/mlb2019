@@ -15,14 +15,18 @@ class ExtraLinks extends React.Component {
 
     const extraLinks = []
 
-    links.forEach((link) => {
-      console.log(link)
-      extraLinks.push(
-        <span className="link-url">
-          <a href={ link }>{ link }</a>
-        </span>
-      );
-    })
+    if (links.length === 0) {
+      extraLinks.push(<span>no extra links</span>)
+    }
+    else {
+      links.forEach((link) => {
+        extraLinks.push(
+          <span className="link-url">
+            <a href={ link }>{ link }</a>
+          </span>
+        );
+      })
+    }
 
     return (
       <div className="links">
