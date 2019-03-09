@@ -11,8 +11,8 @@ const captionHash = {
   6: 'Bullpen',
   9: 'Major Leagues',
   11: 'Strikeout',
-  14: 'Innings',
-  17: 'Up/Down',
+  14: 'Inning',
+  17: 'Up Down',
   27: 'Right Field',
   40: 'Ball',
   41: 'Strike',
@@ -61,6 +61,11 @@ class CaptionList extends React.Component {
     currentTime: 0,
   };
 
+  updateScroll = () => {
+    var element = document.getElementById("scroll-list");
+    element.scrollTop = element.scrollHeight;
+  };
+
   componentDidMount() {
     let currentTime = 0;
     window.setInterval(() => {
@@ -69,6 +74,10 @@ class CaptionList extends React.Component {
         this.setState({ captions: this.state.captions.concat(captionHash[currentTime])})
       }
     }, 1000)
+  }
+
+  componentDidUpdate() {
+    this.updateScroll();
   }
 
   render() {
