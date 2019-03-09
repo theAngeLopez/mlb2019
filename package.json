@@ -20,6 +20,7 @@
     "react-youtube": "^7.9.0"
   },
   "devDependencies": {
+    "firebase": "^5.8.6",
     "prettier": "^1.16.4"
   },
   "keywords": [
