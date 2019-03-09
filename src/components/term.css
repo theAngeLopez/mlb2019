@@ -2,6 +2,10 @@
   padding: 15px;
 }
 
+.no-term-selected-title {
+  font-size: 35px !important;
+}
+
 .term-title {
   font-size: 50px !important;
 }

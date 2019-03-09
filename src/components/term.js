@@ -14,7 +14,7 @@ class Term extends React.Component {
       <div className="term-component">
         <Card fluid>
           <Card.Content>
-            <Card.Header className="term-title">{ title }</Card.Header>
+            { title !== "" ? <Card.Header className="term-title">{ title }</Card.Header> : <Card.Header className="no-term-selected-title">Click a term on the right to see its definition</Card.Header> }
             <Card.Description>{ definition }</Card.Description>
           </Card.Content>
           <Card.Content extra>
