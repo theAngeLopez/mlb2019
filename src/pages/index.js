@@ -34,7 +34,7 @@ class IndexPage extends React.Component {
           <Youtube />
           { this.state.currentSelectedCaption && <Term title={this.state.currentSelectedCaption} definition={this.state.definition}/> }
         </div>
-        <div style={{ width: '33%', height: '772px'}}>
+        <div style={{ width: '33%', height: '740px'}}>
           <CaptionList onClick={ this.getTerm } />
         </div>
       </div>
