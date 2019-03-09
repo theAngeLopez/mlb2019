@@ -19,10 +19,10 @@ class ExtraLinks extends React.Component {
       extraLinks.push(<span>no extra links</span>)
     }
     else {
-      links.forEach((link) => {
+      links.forEach((link, index) => {
         extraLinks.push(
           <span className="link-url">
-            <a href={ link }>{ link }</a>
+            <a href={ link }>Link { index + 1 }</a>
           </span>
         );
       })
