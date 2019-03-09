@@ -25,7 +25,7 @@ class IndexPage extends React.Component {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ marginRight: '5px'}}>
           <Youtube />
-          <Term title={this.state.currentSelectedCaption} definition={this.state.currentSelectedCaption}/>
+          { this.state.currentSelectedCaption && <Term title={this.state.currentSelectedCaption} definition={this.state.currentSelectedCaption}/> }
         </div>
         <div>
           <CaptionList onClick={ this.onChangeCaption } />
