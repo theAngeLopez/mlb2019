@@ -22,7 +22,7 @@ class Term extends React.Component {
       <div className="term-component">
         <Card fluid>
           <Card.Content>
-            <Card.Header>{ title }</Card.Header>
+            <Card.Header className="term-title">{ title }</Card.Header>
             <Card.Description>{ definition }</Card.Description>
           </Card.Content>
           <Card.Content extra>
