@@ -10,17 +10,7 @@ import "./term.css"
 
 class Term extends React.Component {
 
-  getTerm() {
-    console.log(Firebase.glossary()
-      .then((data) => {
-        console.log('DATA', data);
-        return this.setState({definition: data});
-      })
-      .catch((error) => {
-        console.log('ERROR', error);
-      })
-    );
-  }
+
 
   render() {
     const { title, definition } = this.props;

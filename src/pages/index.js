@@ -16,20 +16,26 @@ class IndexPage extends React.Component {
     currentSelectedCaption: '',
   };
 
-  onChangeCaption = (text) => {
-    console.log('TEXT?', text);
-    this.setState({ currentSelectedCaption: text });
-  };
+  getTerm = (term) => {
+    const that = this;
+    Firebase.glossary(term)
+      .then((data) => {
+        that.setState({currentSelectedCaption: term, definition: data});
+      })
+      .catch((error) => {
+        console.log('ERROR', error);
+      })
+  }
 
   render() {
     return (
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ marginRight: '5px'}}>
           <Youtube />
-          { this.state.currentSelectedCaption && <Term title={this.state.currentSelectedCaption} definition={this.state.currentSelectedCaption}/> }
+          { this.state.currentSelectedCaption && <Term title={this.state.currentSelectedCaption} definition={this.state.definition}/> }
         </div>
         <div>
-          <CaptionList onClick={ this.onChangeCaption } />
+          <CaptionList onClick={ this.getTerm } />
         </div>
       </div>
     )

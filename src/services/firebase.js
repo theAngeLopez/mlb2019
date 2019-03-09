@@ -14,15 +14,13 @@ var config = {
 
 class Firebase {
   constructor() {
-    console.log('WAT')
     firebase.initializeApp(config);
     this.database = firebase.database();
     this.auth = firebase.auth
   }
 
-  glossary = () => {
-    return this.database.ref('/glossary/bullpen').once('value').then(function(snapshot) {
-      console.log('SNAPSHOT', snapshot.val());
+  glossary = (term) => {
+    return this.database.ref(`/glossary/${term.toLowerCase()}`).once('value').then(function(snapshot) {
       return snapshot.val();
     });
   }
