@@ -1,3 +1,7 @@
+.term-component {
+  padding: 15px;
+}
+
 .term-title {
   font-size: 50px !important;
 }
