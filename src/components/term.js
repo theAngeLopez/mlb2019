@@ -6,16 +6,8 @@ import { Card } from 'semantic-ui-react'
 import "./term.css"
 
 class Term extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: props.title,
-      definition: props.definition,
-    };
-  }
-
   render() {
-    const { title, definition } = this.state;
+    const { title, definition } = this.props;
     const links = ["link1.com", "link2.com", "link3.com"]
 
     return (

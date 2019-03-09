@@ -10,16 +10,29 @@ import Term from "../components/term"
 
 import 'semantic-ui-css/semantic.min.css'
 
-const IndexPage = () => (
-  <div style={{ display: 'flex', justifyContent: 'center' }}>
-    <div style={{ marginRight: '5px'}}>
-      <Youtube />
-      <Term title={"RBI"} definition={"THIS IS WHAT AN RBI IS ABOUT"}/>
-    </div>
-    <div style={{ }}>
-      <CaptionList />
-    </div>
-  </div>
-);
+class IndexPage extends React.Component {
+  state = {
+    currentSelectedCaption: '',
+  };
+
+  onChangeCaption = (text) => {
+    console.log('TEXT?', text);
+    this.setState({ currentSelectedCaption: text });
+  };
+
+  render() {
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ marginRight: '5px'}}>
+          <Youtube />
+          <Term title={this.state.currentSelectedCaption} definition={this.state.currentSelectedCaption}/>
+        </div>
+        <div>
+          <CaptionList onClick={ this.onChangeCaption } />
+        </div>
+      </div>
+    )
+  }
+}
 
 export default IndexPage;

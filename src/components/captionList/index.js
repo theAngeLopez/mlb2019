@@ -77,7 +77,7 @@ class CaptionList extends React.Component {
         <Header size="large">TITLE TBD</Header>
         <div style={{ height: '500px', overflow: 'scroll' }}>
           { this.state.captions.map((caption) => {
-            return <Caption text={caption} />
+            return <Caption text={caption} onClick={ this.props.onClick } />
           }) }
         </div>
       </div>
