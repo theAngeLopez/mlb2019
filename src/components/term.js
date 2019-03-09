@@ -21,7 +21,7 @@ class Term extends React.Component {
         <Card fluid>
           <Card.Content>
             { title !== "" ? <Card.Header className="term-title">{ title }</Card.Header> : <Card.Header className="no-term-selected-title">Click a term on the right to see its definition</Card.Header> }
-            <Card.Description>{ definition }</Card.Description>
+            <Card.Description style={{'height': '148px', 'overflow-y': 'scroll'}}>{ definition }</Card.Description>
           </Card.Content>
           <Card.Content extra>
             <ExtraLinks links={ links }/>
