@@ -1,6 +1,8 @@
 import React from "react"
 
 import YouTube from 'react-youtube'
+//import getYoutubeSubtitles from '@joegesualdo/get-youtube-subtitles-node';
+
 
 const opts = {
   height: '390',
@@ -12,8 +14,7 @@ const opts = {
 
 const Youtube = () => {
   const _onReady = (event) => {
-    // access to player in all event handlers via event.target
-    //event.target.pauseVideo();
+    event.target.seekTo(0, false);
   };
 
   return (

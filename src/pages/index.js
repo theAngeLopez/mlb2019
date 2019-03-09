@@ -5,12 +5,18 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Youtube from "../components/youtube"
+import CaptionList from "../components/captionList"
 import Term from "../components/term"
 
 const IndexPage = () => (
   <div>
-    <Youtube />
-    <Term title={"RBI"} definition={"THIS IS WHAT AN RBI IS ABOUT"}/>
+    <div>
+      <Youtube />
+      <CaptionList />
+    </div>
+    <div>
+      <Term title={"RBI"} definition={"THIS IS WHAT AN RBI IS ABOUT"}/>
+    </div>
   </div>
 );
 
