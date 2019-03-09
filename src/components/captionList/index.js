@@ -1,5 +1,9 @@
 import React from "react"
 
+import { Header } from 'semantic-ui-react'
+
+import Caption from '../caption';
+
 
 const captionHash = {
   1: 'Starter',
@@ -36,10 +40,13 @@ class CaptionList extends React.Component {
 
   render() {
     return (
-      <div className="caption-list">
-        { this.state.captions.map((caption) => {
-          return <div>{caption}</div>
-        }) }
+      <div className="caption-list" style={{ marginTop: '10px' }}>
+        <Header size="large">TITLE TBD</Header>
+        <div style={{ height: '500px', overflow: 'scroll' }}>
+          { this.state.captions.map((caption) => {
+            return <Caption text={caption} />
+          }) }
+        </div>
       </div>
     );
   }

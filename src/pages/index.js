@@ -11,13 +11,13 @@ import Term from "../components/term"
 import 'semantic-ui-css/semantic.min.css'
 
 const IndexPage = () => (
-  <div>
-    <div>
+  <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div style={{ marginRight: '5px'}}>
       <Youtube />
-      <CaptionList />
-    </div>
-    <div>
       <Term title={"RBI"} definition={"THIS IS WHAT AN RBI IS ABOUT"}/>
+    </div>
+    <div style={{ }}>
+      <CaptionList />
     </div>
   </div>
 );
