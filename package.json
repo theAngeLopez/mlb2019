@@ -18,6 +18,7 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-youtube": "^7.9.0",
+    "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.85.0"
   },
   "devDependencies": {

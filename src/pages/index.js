@@ -8,6 +8,8 @@ import Youtube from "../components/youtube"
 import CaptionList from "../components/captionList"
 import Term from "../components/term"
 
+import 'semantic-ui-css/semantic.min.css'
+
 const IndexPage = () => (
   <div>
     <div>
